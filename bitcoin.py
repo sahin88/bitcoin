@@ -23,13 +23,13 @@ class Bitcoin:
 
     def sha_256_hash_function(self, text):
         """
-        Hash the text
+        Hash data
 
         Args:
-            text(str): Text to be encrypted or hashed
+            text(str): Data to be encrypted or hashed.
 
         Raises:
-            BitcoinException: If the  text args is None
+            BitcoinException: If the data, which will be hashed is None.
 
         Returns:
             Hashed data
@@ -87,13 +87,13 @@ class Bitcoin:
         Calculate time to mine the bitcoin
 
         Args:
-            start_time(float): Unix time, at which calculation is started
-            end_time(float): Unix time, at which calculation is ended
+            start_time(float): Unix time, at which calculation is started.
+            end_time(float): Unix time, at which calculation is ended.
 
-          Returns:
-              float. Time difference in seconds.
+        Returns:
+          (float): Time difference in seconds.
 
-          """
+        """
         if not isinstance(start_time, str) and not isinstance(end_time, str) \
                 and start_time is not None and end_time is not None:
             return end_time - start_time
